@@ -3,6 +3,7 @@ using System;
 using EntityFrameworkCore.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EntityFrameworkCore.Data.Migrations
 {
     [DbContext(typeof(FootballLeagueDbContext))]
-    partial class FootballLeagueDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250930114458_SeededTeams")]
+    partial class SeededTeams
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.9");
@@ -55,19 +58,19 @@ namespace EntityFrameworkCore.Data.Migrations
                         new
                         {
                             TeamId = 1,
-                            CreatedDate = new DateTime(2025, 9, 30, 14, 49, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2025, 9, 30, 11, 44, 57, 320, DateTimeKind.Unspecified).AddTicks(2302),
                             Name = "Tivoli Gardens FC"
                         },
                         new
                         {
                             TeamId = 2,
-                            CreatedDate = new DateTime(2025, 9, 30, 14, 50, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2025, 9, 30, 11, 44, 57, 320, DateTimeKind.Unspecified).AddTicks(3213),
                             Name = "Waterhouse F.C."
                         },
                         new
                         {
                             TeamId = 3,
-                            CreatedDate = new DateTime(2025, 9, 30, 14, 51, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2025, 9, 30, 11, 44, 57, 320, DateTimeKind.Unspecified).AddTicks(3221),
                             Name = "Humble Lions F.C."
                         });
                 });
